@@ -13,12 +13,16 @@ class Dog
     @@all
   end
   
+  def self.save
+    @@all.cycle
+  end
+  
+  def self.print_all(name)
+   @@all.find { |x| x.name == name}
+  end
+  
   def self.clear_all
     @@all.clear
   end
-  
-  def self.print_all
-   @@all.each { |x| print x}
-  
   
 end
